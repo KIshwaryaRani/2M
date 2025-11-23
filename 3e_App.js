@@ -1,4 +1,3 @@
-import React from "react";
 import PostsList from "./components/PostsList";
 
 export default function App() {
@@ -9,3 +8,5 @@ export default function App() {
     </div>
   );
 }
+
+npm install axios

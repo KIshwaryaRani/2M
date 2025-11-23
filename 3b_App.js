@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -7,7 +6,7 @@ import Contact from "./Pages/Contact";
 export default function App() {
   return (
     <div>
-      <nav style={{ display: "flex", justifyContent: "center", gap: "30px", padding: "10px", background: "#282c34" }}>
+      <nav style={{ display: "flex", gap: 30, padding: 10, background: "#282c34" }}>
         <NavLink to="/" style={{ color: "white" }}>Home</NavLink>
         <NavLink to="/about" style={{ color: "white" }}>About</NavLink>
         <NavLink to="/contact" style={{ color: "white" }}>Contact</NavLink>
@@ -21,3 +20,7 @@ export default function App() {
     </div>
   );
 }
+
+
+
+npm install react react-dom react-router-dom

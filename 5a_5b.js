@@ -1,84 +1,84 @@
-CREATE DATABASE CollegeDB;
-USE CollegeDB;
+create database collegedb369;
+use collegedb369;
 
-
--- Create Student table
-CREATE TABLE Student (
-  StudentID INT PRIMARY KEY,
-  Name VARCHAR(50),
-  Age INT
+-- create student table
+create table stu369 (
+  studentid int primary key,
+  name varchar(50),
+  age int
 );
 
--- Create Course table
-CREATE TABLE Course (
-  CourseID INT PRIMARY KEY,
-  CourseName VARCHAR(50),
-  Credits INT
+-- create course table
+create table course369 (
+  courseid varchar(10) primary key,
+  coursename varchar(50),
+  credits int
 );
 
--- Create Enrollment table
-CREATE TABLE Enrollment (
-  EnrollID INT PRIMARY KEY,
-  StudentID INT,
-  CourseID INT,
-  FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
-  FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+-- create enrollment table
+create table enroll369 (
+  enrollid int primary key,
+  studentid int,
+  courseid varchar(10),
+  foreign key (studentid) references stu369(studentid),
+  foreign key (courseid) references course369(courseid)
 );
 
+-- insert data into student
+insert into stu369 values (1, 'ishwarya', 20);
+insert into stu369 values (2, 'raja', 21);
 
-INSERT INTO Student VALUES (1, 'Ishwarya', 20);
-INSERT INTO Student VALUES (2, 'Raja', 21);
+-- insert data into course
+insert into course369 values ('c101', 'dbms', 3);
+insert into course369 values ('c102', 'java', 4);
 
-INSERT INTO Course VALUES ('C101', 'DBMS', 3);
-INSERT INTO Course VALUES ('C102', 'Java', 4);
+-- insert data into enrollment
+insert into enroll369 values (1, 1, 'c101');
+insert into enroll369 values (2, 1, 'c102');
+insert into enroll369 values (3, 2, 'c102');
 
-INSERT INTO Enrollment VALUES (1, 1, 'C101');
-INSERT INTO Enrollment VALUES (2, 1, 'C102');
-INSERT INTO Enrollment VALUES (3, 2, 'C102');
-
-SELECT * FROM Student;
-SELECT * FROM Course;
-SELECT * FROM Enrollment;
-
-
+-- display results
+select * from stu369;
+select * from course369;
+select * from enroll369;
 
 
 
+create database collegedb369;
+use collegedb369;
 
-CREATE DATABASE CollegeDB;
-USE CollegeDB;
-
--- Create Tables
-CREATE TABLE Student (
-  StudentID INT PRIMARY KEY,
-  Name VARCHAR(50),
-  Age INT
+-- create tables
+create table stu369 (
+  studentid int primary key,
+  name varchar(50),
+  age int
 );
 
-CREATE TABLE Course (
-  CourseID INT PRIMARY KEY,
-  CourseName VARCHAR(50),
-  Credits INT
+create table course369 (
+  courseid int primary key,
+  coursename varchar(50),
+  credits int
 );
 
--- Insert Records
-INSERT INTO Student VALUES (1, 'Ishwarya', 20);
-INSERT INTO Student VALUES (2, 'Raja', 21);
-INSERT INTO Course VALUES (101, 'DBMS', 4);
-INSERT INTO Course VALUES (102, 'Java', 3);
+-- insert records
+insert into stu369 values (1, 'ishwarya', 20);
+insert into stu369 values (2, 'raja', 21);
 
--- Read Data
-SELECT * FROM Student;
-SELECT * FROM Course;
+insert into course369 values (101, 'dbms', 4);
+insert into course369 values (102, 'java', 3);
 
--- Update Data
-UPDATE Student SET Age = 22 WHERE StudentID = 1;
-UPDATE Course SET Credits = 5 WHERE CourseID = 101;
+-- read data
+select * from stu369;
+select * from course369;
 
--- Delete Data
-DELETE FROM Student WHERE StudentID = 2;
-DELETE FROM Course WHERE CourseID = 102;
+-- update data
+update stu369 set age = 22 where studentid = 1;
+update course369 set credits = 5 where courseid = 101;
 
--- Final Display
-SELECT * FROM Student;
-SELECT * FROM Course;
+-- delete data
+delete from stu369 where studentid = 2;
+delete from course369 where courseid = 102;
+
+-- final display
+select * from stu369;
+select * from course369;

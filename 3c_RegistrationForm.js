@@ -18,27 +18,13 @@ export default function RegistrationForm() {
       <h2>Registration Form</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:{" "}
-          <input
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            required
-          />
+          Name:
+          <input type="text" name="name" value={form.name} onChange={handleChange} />
         </label>
         <br /><br />
         <label>
-          Email:{" "}
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            required
-          />
+          Email:
+          <input type="email" name="email" value={form.email} onChange={handleChange} />
         </label>
         <br /><br />
         <button type="submit">Submit</button>

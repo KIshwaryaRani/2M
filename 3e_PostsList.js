@@ -14,7 +14,9 @@ export default function PostsList() {
     <div style={{ padding: 20 }}>
       <h3>Posts</h3>
       <ul>
-        {posts.map(p => <li key={p.id}><b>{p.title}</b></li>)}
+        {posts.map(p => (
+          <li key={p.id}><b>{p.title}</b></li>
+        ))}
       </ul>
     </div>
   );
